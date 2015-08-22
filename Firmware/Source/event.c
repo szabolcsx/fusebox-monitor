@@ -12,4 +12,9 @@ inline void handleEvents(void)     /* Eseményel feldolgozása */
 
         lcdwStringAt(&lcdHandle, 1, 1, "Hello world!");
     }
+
+    if(eventFlags.handlePinChangeRequested)
+    {
+        eventFlags.handlePinChangeRequested = 0;
+    }
 }
