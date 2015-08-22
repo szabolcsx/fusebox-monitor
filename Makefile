@@ -94,4 +94,4 @@ $(OBJECT_DIR):
 	@mkdir $(OBJECT_DIR)
 
 upload: hex eep
-	@avrdude -p$(AVRDUDE_MCU) -c$(AVRDUDE_PROGRAMMERID) -e -U flash:w:$(HEX):a -U eeprom:w:$(EEP):a -U lfuse:w:0x$(AVRDUDE_LFUSE):m -U hfuse:w:0x$(AVRDUDE_HFUSE):m -U efuse:w:0x$(AVRDUDE_EFUSE):m
+	@avrdude -p$(AVRDUDE_MCU) -c$(AVRDUDE_PROGRAMMERID) -P$(AVRDUDE_PORT) -e -U flash:w:$(HEX):a -U eeprom:w:$(EEP):a -U lfuse:w:0x$(AVRDUDE_LFUSE):m -U hfuse:w:0x$(AVRDUDE_HFUSE):m -U efuse:w:0x$(AVRDUDE_EFUSE):m
