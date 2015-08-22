@@ -1,7 +1,5 @@
 #include <init.h>
-#include <lcd2.h>
-#include <io_mapping.h>
-#include <flags.h>
+#include <event.h>
 
 #include <avr/interrupt.h>
 
@@ -17,12 +15,7 @@ int main(void)
 
     while(1)
     {
-        if(eventFlags.updateLcdRequested)
-        {
-            eventFlags.updateLcdRequested = 0;
-
-            lcdwStringAt(&lcdHandle, 1, 1, "Hello world!");
-        }
+        handleEvents();
     }
 
     return 0;
