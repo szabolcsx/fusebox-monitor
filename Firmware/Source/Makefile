@@ -24,7 +24,7 @@ F_CPU=8000000UL
 OPTLEVEL=s
 
 DEFINES=-DF_CPU=$(F_CPU)
-INC=
+INC=-I../Include
 LIBS=
 
 CFLAGS=-I. $(INC) $(DEFINES) -g -mmcu=$(MCU) -O$(OPTLEVEL) \
