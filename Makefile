@@ -85,7 +85,7 @@ $(OBJECTS): $(OBJECT_DIR)/%.o : $(SOURCE_DIR)/%.c
 
 clean:
 	@$(RM) -R $(OUTPUT_DIR)
-	@echo "Clean!"
+	@echo "Cleanup completed!"
 
 $(OUTPUT_DIR):
 	@mkdir $(OUTPUT_DIR)
