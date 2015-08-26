@@ -8,9 +8,9 @@
 #define _INPUT(SFR, N)  _CB(DDR##SFR, N)                  // Set the N-th pin on port input: _INPUT(D, 0)
 #define _OUTPUT(SFR, N) _SB(DDR##SFR, N)                  // Set the N-th pin on port output: _OUTPUT(D, 0)
 
-#define HIGHZ           0
-#define LOWZ            1
+#define HIGHZ           0                                 // High impedance mode - input
+#define LOWZ            1                                 // Low impedance mode - output
 
-#define _PIN_MODE(SFR, N, X) _NB(DDR##SFR, N, X)
+#define _PIN_MODE(SFR, N, X) _NB(DDR##SFR, N, X)          // Change pin's impedance
 
 #endif /* __SFR_HELPER__ */
