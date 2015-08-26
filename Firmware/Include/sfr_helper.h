@@ -5,5 +5,7 @@
 #define _SB(SFR, N)     SFR |= (1 << N)                 // Set N-th bit
 #define _CB(SFR, N)     SFR &=~(1 << N)                 // Celear N-th bit
 #define _NB(SFR, N, X)  SFR ^= (-X ^ SFR) & (1 << N)    // Value of N-t bit = X X->[0,1]
+#define _INPUT(SFR, N)  _CB(DDR##SFR, N)
+#define _OUTPUT(SFR, N)  _SB(DDR##SFR, N)
 
 #endif /* __SFR_HELPER__ */
