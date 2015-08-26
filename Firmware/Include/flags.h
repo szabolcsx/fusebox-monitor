@@ -4,6 +4,7 @@
 typedef struct
 {
     unsigned updateLcdRequested:1;
+    unsigned handlePinChangeRequested:1;
 } eventFlags_t;
 
 volatile eventFlags_t eventFlags;
