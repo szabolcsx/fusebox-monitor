@@ -10,8 +10,6 @@
 
 inline void initIO(void)       /* Ki- és bemeneti kapuk inicalizálása */
 {
-    //DDRD = 0xFF;
-
     _OUTPUT(D, 0);
     _OUTPUT(D, 1);
     _OUTPUT(D, 2);
