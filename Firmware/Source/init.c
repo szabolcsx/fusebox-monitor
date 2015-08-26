@@ -10,7 +10,16 @@
 
 inline void initIO(void)       /* Ki- és bemeneti kapuk inicalizálása */
 {
-    DDRD = 0xFF;
+    //DDRD = 0xFF;
+
+    _OUTPUT(D, 0);
+    _OUTPUT(D, 1);
+    _OUTPUT(D, 2);
+    _OUTPUT(D, 3);
+    _OUTPUT(D, 4);
+    _OUTPUT(D, 5);
+    _OUTPUT(D, 6);
+    _OUTPUT(D, 7);
 }
 
 inline void initTimer0(void)   /* Timer0 modul inicializálása */
